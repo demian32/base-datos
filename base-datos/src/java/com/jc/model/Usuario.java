@@ -12,8 +12,14 @@ package com.jc.model;
  */
 public class Usuario {
     private int id;
-    private String nombre;
-    private float sueldo;
+    private String password;
+    private String login;
+
+    public Usuario(int id, String password, String login) {
+        this.id = id;
+        this.password = password;
+        this.login = login;
+    }
 
     public int getId() {
         return id;
@@ -23,20 +29,21 @@ public class Usuario {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getpassword() {
+        return password;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setpassword(String password) {
+        this.password = password;
     }
 
-    public float getSueldo() {
-        return sueldo;
+
+    public String getLogin() {
+        return login;
     }
 
-    public void setSueldo(float sueldo) {
-        this.sueldo = sueldo;
+    public void setLogin(String login) {
+        this.login = login;
     }
     
 }

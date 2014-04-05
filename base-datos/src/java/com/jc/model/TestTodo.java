@@ -18,14 +18,10 @@ public class TestTodo {
     public static void main(String...x)throws Exception{
         System.out.println("probando usuario");
         
-        
-        DAOUsuario dao=new DAOUsuario();
-       
-        ArrayList<Usuario> us= dao.buscarTodos();
-        for(Usuario un:us){
-            System.out.println(un.getId()+"-"+un.getNombre()+"-"+un.getSueldo());
-       
+        for(Usuario u:DAOUsuario.buscarTodos()){
+            System.out.println(u.getLogin());
+            
         }
-        System.out.println("termino de leer "+us.size()+ " usuarios");
+        
     }
 }
